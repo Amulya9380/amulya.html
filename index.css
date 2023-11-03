@@ -1,0 +1,62 @@
+.name {
+    color: #000;
+    text-align: center;
+}
+
+.main {
+    width: 100%;
+    background-image:url(pexels-photo-2166711.jpeg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about {
+    width: 50%;
+    
+}
+
+.education-details {
+    width: 50%;
+    
+}
+
+.hobbies {
+    width: 50%;
+    
+}
+
+div {
+    color: black;
+    margin: 20px auto;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 0%;
+    float: left;
+}
+img{
+    height: 200px;
+    width: 250px;
+}
+header {
+    color:black;
+    text-align: right;
+    padding: 10px;
+}
+.name {
+    color:black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+h1{
+    color:rgb(220, 20, 20);
+}
+
+h3{
+    width: 50%;
+    color: rgb(4, 22, 4);
+}
+
+
