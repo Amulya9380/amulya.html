@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src=" https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#p1").click(function(){
+                alert("ha ha you cannot close me....😜😊😊!");
+            });
+        });
+        $(document).ready(function(){
+            $("p").on({
+                mouseenter : function(){
+                    $(this).css("background color","pink");
+                }
+                mouseleave : function(){
+                    $(this).css("background color","blue");
+                },
+                click : function(){
+                    $(this).css("background color","red");
+                } 
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <p>touch me if u can</p>
+    <button id="p1">close</button>
+</body>
+</html>
