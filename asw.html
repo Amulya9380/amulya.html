@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #moving-image {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="moveImage()">Move Image</button>
+    <img id="moving-image" src="sbs.jpg" alt="Moving Image">
+    
+    <script>
+        function moveImage() {
+            var image = document.getElementById("moving-image");
+            var currentPosition = 0;
+            
+            // Move the image horizontally
+            var moveInterval = setInterval(function() {
+                currentPosition += 5; // Adjust the pixel value as needed
+                image.style.left = currentPosition + "px";
+                
+                // Stop moving after reaching a certain point
+                if (currentPosition >= 200) { // Adjust this point as needed
+                    clearInterval(moveInterval);
+                }
+            }, 10); // Adjust the interval as needed
+        }
+    </script>
+</body>
+</html>

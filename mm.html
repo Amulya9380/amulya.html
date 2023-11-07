@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit Conversion</title>
+</head>
+<body>
+    <h1>Unit Conversion</h1>
+    <p>Convert between mm, cm, and m:</p>
+
+    <input type="number" id="inputValue" placeholder="Enter value">
+    <select id="unitSelect">
+        <option value="mm">mm</option>
+        <option value="cm">cm</option>
+        <option value="m">m</option>
+    </select>
+    <button onclick="convertUnits()">Convert</button>
+
+    <p id="result"></p>
+
+    <script>
+        function convertUnits() {
+            const inputValue = parseFloat(document.getElementById("inputValue").value);
+            const unitSelect = document.getElementById("unitSelect").value;
+            let result = 0;
+
+            if (unitSelect === "mm") {
+                result = inputValue / 10; // mm to cm
+            } else if (unitSelect === "cm") {
+                result = inputValue * 10; // cm to mm
+            } else if (unitSelect === "m") {
+                result = inputValue / 1000; // m to km
+            }
+
+            document.getElementById("result").innerText = result + " " + unitSelect;
+        }
+    </script>
+</body>
+</html>

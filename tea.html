@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .counter {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="counter">
+        <h1>Coffee and Tea and badammilk and boost Counter</h1>
+        <p>Coffee: <span id="coffeeCounter">0</span></p>
+        <p>Tea: <span id="teaCounter">0</span></p>
+        <p>badammilk: <span id="badammilkCounter">0</span></p>
+        <p>boost: <span id="boostCounter">0</span></p>
+        <button onclick="incrementCounter('coffeeCounter')">Add Coffee</button>
+        <button onclick="incrementCounter('teaCounter')">Add Tea</button>
+        <button onclick="incrementCounter('badammilkCounter')">Add badammilk</button>
+        <button onclick="incrementCounter('boostCounter')">Add boost</button>
+    </div>
+
+    <script>
+        function incrementCounter(counterId) {
+            var counterElement = document.getElementById(counterId);
+            var currentCount = parseInt(counterElement.innerHTML);
+            counterElement.innerHTML = currentCount + 1;
+        }
+    </script>
+</body>
+</html>

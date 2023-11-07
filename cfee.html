@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coffee and Tea and badammilk and boost Order</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Coffee and Tea and badammilk and boost Order</h1>
+        <h2>Menu</h2>
+        <p>Coffee: $12 per cup</p>
+        <p>Tea: $10 per cup</p>
+        <p>badammilk: $15 per cup</p>
+        <p>boost: $15 per cup</p>
+
+        <h2>Order</h2>
+        <p>Coffee:
+            <button onclick="decrement('coffee')">-</button>
+            <span id="coffeeAmount">0</span>
+            <button onclick="increment('coffee')">+</button>
+        </p>
+        <p>Tea:
+            <button onclick="decrement('tea')">-</button>
+            <span id="teaAmount">0</span>
+            <button onclick="increment('tea')">+</button>
+        </p>
+        <p>badammilk:
+            <button onclick="decrement('badammilk')">-</button>
+            <span id="badammilk Amount">0</span>
+            <button onclick="increment('badammilk')">+</button>
+            </p>
+            <p>boost:
+                <button onclick="decrement('boost')">-</button>
+                <span id="boostAmount">0</span>
+                <button onclick="increment('boost')">+</button>
+            </p>
+        <h3>Total: $<span id="totalAmount">0.00</span></h3>
+    </div>
+
+    <script>
+        let coffeeAmount = 0;
+        let teaAmount = 0;
+        let badammilkAmount = 0;
+        let boostAmount = 0;
+
+        function updateTotal() {
+            const coffeePrice = 12;
+            const teaPrice = 10;
+            const badammilkPrice = 15;
+            const boostPrice = 15;
+            const total = coffeeAmount * coffeePrice + teaAmount * teaPrice + badammilkamount * badammilkprice +  boostamount * boostprice ;
+            document.getElementById("totalAmount").textContent = total.toFixed(4);
+        }
+
+        function increment(item) {
+            if (item === 'coffee') {
+                coffeeAmount++;
+                document.getElementById("coffeeAmount").textContent = coffeeAmount;
+            } else if (item === 'tea') {
+                teaAmount++;
+                document.getElementById("teaAmount").textContent = teaAmount;
+            } else if (item === 'badammilk') {
+                badammilkAmount++;
+                document.getElementById("badammilkAmount").textContent = badammilkAmount;
+            }
+         else if (item === 'boost') {
+                boostAmount++;
+                document.getElementById("boostAmount").textContent = boostAmount;
+            }
+            updateTotal();
+        }
+
+        function decrement(item) {
+            if (item === 'coffee' && coffeeAmount > 0) {
+                coffeeAmount--;
+                document.getElementById("coffeeAmount").textContent = coffeeAmount;
+            } else if (item === 'tea' && teaAmount > 0) {
+                teaAmount--;
+                document.getElementById("teaAmount").textContent = teaAmount;
+            }
+         else if (item === 'badammilk' && badammilkAmount > 0) {
+                badammilkAmount--;
+                document.getElementById("badammilkAmount").textContent = badammilkAmount;
+            }
+         else if (item === 'boost' && boostAmount > 0) {
+                boostAmount--;
+                document.getElementById("boostAmount").textContent = boostAmount;
+         }
+            updateTotal();
+        }
+    </script>
+</body>
+</html>

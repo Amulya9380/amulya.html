@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Love Calculator</h1>
+    <p>Enter two names to check their compatibility:</p>
+    
+    <input type="text" id="name1" placeholder="Name 1">
+    <input type="text" id="name2" placeholder="Name 2">
+    <button onclick="calculateLove()">Calculate</button>
+    
+    <div id="result"></div>
+    
+    <script>
+        function calculateLove() {
+            var name1 = document.getElementById("name1").value.trim().toLowerCase();
+            var name2 = document.getElementById("name2").value.trim().toLowerCase();
+
+            var lovePercentage = (name1.length % 10 + name2.length % 10) * 10;
+            var resultMessage = "Love Compatibility: " + lovePercentage + "%";
+
+            document.getElementById("result").textContent = resultMessage;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit Conversion</title>
+</head>
+<body>
+    <h1>Unit Conversion</h1>
+
+    <label for="millimeters">Millimeters:</label>
+    <input type="text" id="millimeters" oninput="convertUnits()"><br>
+
+    <label for="centimeters">Centimeters:</label>
+    <input type="text" id="centimeters" readonly><br>
+
+    <label for="meters">Meters:</label>
+    <input type="text" id="meters" readonly><br>
+
+    <label for="kilometers">Kilometers:</label>
+    <input type="text" id="kilometers" readonly><br>
+
+    <label for="miles">Miles:</label>
+    <input type="text" id="miles" readonly><br>
+
+    <script>
+        function convertUnits() {
+            const millimeters = parseFloat(document.getElementById('millimeters').value);
+            const centimeters = millimeters / 10;
+            const meters = centimeters / 100;
+            const kilometers = meters / 1000;
+            const miles = kilometers * 0.621371;
+
+            document.getElementById('centimeters').value = centimeters.toFixed(2);
+            document.getElementById('meters').value = meters.toFixed(2);
+            document.getElementById('kilometers').value = kilometers.toFixed(6);
+            document.getElementById('miles').value = miles.toFixed(6);
+        }
+    </script>
+</body>
+</html>

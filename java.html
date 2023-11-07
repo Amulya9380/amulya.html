@@ -1,0 +1,20 @@
+// Function to convert dollars to rupees
+function dollarsToRupees(dollars) {
+    const exchangeRate = 74.5; // Change this to the current exchange rate
+    return dollars * exchangeRate;
+  }
+  
+  // Function to convert rupees to dollars
+  function rupeesToDollars(rupees) {
+    const exchangeRate = 74.5; // Change this to the current exchange rate
+    return rupees / exchangeRate;
+  }
+  
+  // Example usage:
+  const dollarsAmount = 100;
+  const rupeesAmount = dollarsToRupees(dollarsAmount);
+  console.log(`${dollarsAmount} dollars = ${rupeesAmount} rupees`);
+  
+  const rupeesAmount2 = 5000;
+  const dollarsAmount2 = rupeesToDollars(rupeesAmount2);
+  console.log(`${rupeesAmount2} rupees = ${dollarsAmount2} dollars`);

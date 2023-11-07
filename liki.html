@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Your Drinks</title>
+  <style>
+     h1{
+        color:rgb(102, 11, 239);
+     }
+     *{background-image: url(sbucks.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100%;
+     }
+    
+        
+    
+
+  </style>
+</head>
+<body><center>
+  <h1>STARBUCKS</h1>
+
+  <form id="order-form">
+    <label for="coffee">Coffee:</label>
+    <input type="number" id="coffee" name="coffee" value="0">
+    <br> <br>
+
+    <label for="tea">Tea:</label>
+    <input type="number" id="tea" name="tea" value="0">
+    <br> <br>
+
+    <label for="badam">Badam:</label>
+    <input type="number" id="badam" name="badam" value="0">
+    <br> <br>
+
+    <label for="boost">Boost:</label>
+    <input type="number" id="boost" name="boost" value="0">
+    <br> <br>
+
+    <button type="button" onclick="calculateTotal()">Calculate Total</button>
+  </form>
+
+  <p>Total Amount: $<span id="total-amount">0.00</span></p>
+
+  <script>
+    function calculateTotal() {
+      var coffeeAmount = parseFloat(document.getElementById("coffee").value) || 0;
+      var teaAmount = parseFloat(document.getElementById("tea").value) || 0;
+      var badamAmount = parseFloat(document.getElementById("badam").value) || 0;
+      var boostAmount = parseFloat(document.getElementById("boost").value) || 0;
+
+      var total = (coffeeAmount * 10) + (teaAmount * 15) + (badamAmount * 15) + (boostAmount * 15);
+
+      document.getElementById("total-amount").textContent = total.toFixed(2);
+    }
+  </script> </center>
+</body>
+</html>
